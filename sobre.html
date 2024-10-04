@@ -16,8 +16,8 @@
             <nav>
                 <a href="#">xxxxx</a>
                 <a href="#">xxxxx</a>
-                <a href="#">Vitrine</a>
-                <a href="#">Sobre nós</a>
+                <a href="vitrine.html">Vitrine</a>
+                <a href="sobre.html">Sobre nós</a>
                 <a href="#">xxxxx</a>
             </nav>
             <div class="user-actions">
@@ -27,39 +27,88 @@
             </div>
         </div>
     </header>
+<!-- Estrutura de Navegação Lateral -->
+<div class="container">
+    <aside class="sidebar">
+        <ul>
+            <h3 class="sidebar-title">Home/ Quem somos</h3>
+            <li><a href="sobre.html">Quem somos</a></li>
+            <li><a href="sobre.html">Unidades</a></li>
+        </ul>
+    </aside>
 
-    <!-- Estrutura de Navegação Lateral -->
-    <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <h3>Home/ Quem somos</h3>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Unidades</a></li>
-            </ul>
-        </aside>
 
+    <div class="content">
         <!-- Seção Sobre Nós -->
-        <section class="about-section">
+        <section id="sobre-nos" class="about-section">
             <h1>Sobre Nós</h1>
-            <p>Texto de exemplo que você quer adicionar aqui.</p>
+            <p>Lorem ipsum em ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. 
+                Duis cursus, mi quis viverra ornarem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                 elementum tristique. Duis cursus, mi quis viverra ornarem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse 
+                 varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornardolor sit amet, consectetur adipiscing elit. Suspendisse 
+                 varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. 
+                 Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+            </p>
+        </section>
+
+        <!-- Seção Unidades -->
+        <section id="unidades" class="unidades-section">
+            <h2>Unidades</h2>
+            <p>Aqui você encontra nossas unidades:</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=...(coloque o link embutido do Google Maps)"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </div>
+</div>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="footer-columns">
-            <div class="footer-column">
-                <h3>Óticari</h3>
-                <ul>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Unidades</a></li>
-                </ul>
-            </div>
-            <!-- Outros conteúdos do rodapé -->
+<!-- Rodapé -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Óticari</h4>
+            <ul>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="sobre.html">Unidades</a></li>
+            </ul>
         </div>
-        <div class="footer-bottom">
-            <p>2024 © ÓTICARI COMÉRCIO, SERVIÇOS E E-COMMERCE. Todos os direitos reservados. CNPJ: XXX.XXX.XXX/XXXX-XX.</p>
+        <div class="footer-section">
+            <h4>LOJA</h4>
+            <ul>
+                <li><a href="duvidas.html">Dúvidas frequentes</a></li>
+                <li><a href="duvidas.html">Termos de uso</a></li>
+                <li><a href="duvidas.html">Entrega</a></li>
+                <li><a href="duvidas.html">Reembolso e Cancelamento</a></li>
+                <li><a href="duvidas.html">Garantia</a></li>
+            </ul>
         </div>
-    </footer>
+        <div class="footer-section">
+            <h4>ATENDIMENTO</h4>
+            <ul>
+                <li><a href="mailto:sac@oticari.com.br">sac@oticari.com.br</a></li>
+                <li>+55 xx xxxx-xxxx</li>
+            </ul>
+            <ul class="social-icons">
+                <li><a href="#"><img src="imagens/icon_facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="imagens/icon_whatsapp.png" alt="WhatsApp"></a></li>
+                <li><a href="#"><img src="imagens/icon_instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>PAGAMENTO</h4>
+            <ul class="Pagamento-icons">
+                <li><a href="#"><img src="imagens/Icon_Visa.png" alt="Visa"></a></li>
+                <li><a href="#"><img src="imagens/Icon_Mastercard.png" alt="Mastercard"></a></li>
+                <li><a href="#"><img src="imagens/Icon_Amex.png" alt="Amex"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>2024 © ÓTICARI COMERCIO SERVIÇOS E E-COMMERCE.</p>
+        <p>Todos os direitos reservados. CNPJ: XX.XXX.XXX/XXXX-XX.</p>
+        <p>Eqn 707/907 1, Asa Norte, Brasília.</p>
+        Brasília, Distrito Federal/DF.
+    </div>
+</footer>
 </body>
 </html>

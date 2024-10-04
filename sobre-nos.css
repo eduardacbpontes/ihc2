@@ -3,13 +3,25 @@
 /* Navegação Lateral */
 .container {
     display: flex;
+    flex-direction: row; /* Mantém a navegação lateral e o conteúdo principal lado a lado */
 }
 
 .sidebar {
-    width: 200px;
+    width: 380px; /* Aumentando a largura da sidebar */
     background-color: #f0f0f0;
     padding: 20px;
+    position: sticky; /* Fixa a barra lateral no lado esquerdo enquanto rola a página */
+    top: 0;
+    height: 100vh; /* Garante que a sidebar ocupe toda a altura da janela */
 }
+
+/* Estilo para o título na barra lateral */
+.sidebar-title {
+    font-size: 12px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: thin; /* Mantenha o texto em negrito se desejar */
+    margin-bottom: 10px; /* Adiciona um espaço abaixo do título */
+}
+
 
 .sidebar ul {
     list-style-type: none;
@@ -25,62 +37,109 @@
     font-weight: bold;
 }
 
-/* Seção Sobre Nós */
-.about-section {
-    flex-grow: 1;
+/* Seção de conteúdo (Sobre Nós e Unidades) */
+.content {
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
     padding: 20px;
 }
 
-.about-section h1 {
+/* Estilo para as seções de conteúdo */
+.about-section, .unidades-section {
+    margin-top: 20px; /* Espaço entre as seções */
+}
+
+.about-section h1, .unidades-section h2 {
     font-size: 32px;
     font-weight: bold;
 }
 
-.about-section p {
+.about-section p, .unidades-section p {
     margin-top: 20px;
     line-height: 1.6;
     font-size: 16px;
 }
 
+/* Estilo para o iframe do mapa na seção Unidades */
+.unidades-section iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: none;
+}
+
 /* Rodapé */
 footer {
-    background-color: #f0f0f0;
-    padding: 40px 30px;
+    background-color: #f8f8f8;
+    padding: 20px;
 }
 
-.footer-columns {
+.footer-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Alinha o conteúdo do footer ao centro */
+    flex-wrap: wrap; /* Para garantir que o conteúdo se adapte em telas menores */
 }
 
-.footer-column {
-    width: 200px;
+.footer-section {
+    flex: 1; /* Ocupa o espaço disponível */
+    min-width: 200px; /* Tamanho mínimo para evitar sobreposição em telas pequenas */
+    margin: 10px; /* Margem para espaçamento entre as seções */
+    text-align: center; /* Centraliza o texto dentro da seção */
 }
 
-.footer-column h3 {
+.footer-section h4 {
     margin-bottom: 10px;
 }
 
-.footer-column ul {
-    list-style-type: none;
-    padding: 0;
+.footer-section ul {
+    list-style: none;
+    padding: 0; /* Remover padding da lista */
 }
 
-.footer-column ul li {
-    margin-bottom: 10px;
+.footer-section ul li {
+    margin-bottom: 5px;
 }
 
-.footer-column ul li i {
-    font-size: 30px;
-    margin-right: 10px;
-    color: #007bff;
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
 }
 
 .footer-bottom {
     text-align: center;
-    margin-top: 30px;
-    border-top: 1px solid #d3d3d3;
-    padding-top: 15px;
-    font-size: 14px;
-    color: #666;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+
+/* Estilo para deixar os itens em linha */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones sociais */
+    gap: 15px; /* Espaçamento entre os ícones */
+    list-style: none; /* Remover marcadores de lista */
+    padding: 0; /* Remover padding da lista */
+}
+
+
+.social-icons li a i, 
+.social-icons li a img {
+    font-size: 24px; /* Ajuste o tamanho dos ícones do Font Awesome */
+    width: 24px; /* Ajuste o tamanho dos ícones de imagem */
+    height: auto;
+}
+
+/* Estilo para alinhar os ícones de pagamento horizontalmente */
+.Pagamento-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones de pagamento */
+    gap: 20px; /* Espaçamento entre os ícones */
+    list-style: none; /* Remover marcadores de lista */
+    padding: 0; /* Remover padding da lista */
+}
+
+
+
+.Pagamento-icons li a img {
+    width: 30px; /* Tamanho dos ícones de pagamento */
+    height: auto;
 }

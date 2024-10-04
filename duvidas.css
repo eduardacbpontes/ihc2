@@ -1,0 +1,44 @@
+/* Estilos específicos para a página Sobre Nós */
+
+/* Navegação Lateral */
+.container {
+    display: flex;
+    flex-direction: row; /* Mantém a navegação lateral e o conteúdo principal lado a lado */
+}
+
+.sidebar {
+    width: 380px; /* Aumentando a largura da sidebar */
+    background-color: #f0f0f0;
+    padding: 20px;
+    position: sticky; /* Fixa a barra lateral no lado esquerdo enquanto rola a página */
+    top: 0;
+    height: 100vh; /* Garante que a sidebar ocupe toda a altura da janela */
+}
+
+/* Estilo para o título na barra lateral */
+.sidebar-title {
+    font-size: 12px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: normal; /* Removido negrito */
+    margin-bottom: 10px; /* Adiciona um espaço abaixo do título */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: black;
+    font-weight: normal; /* Removido negrito */
+    font-size: 12px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+/* Seção de conteúdo (Sobre Nós e Unidades) */
+.content {
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
+    padding: 20px;
+}
