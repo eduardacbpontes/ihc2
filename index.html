@@ -30,7 +30,8 @@
     <section class="banner">
         <button class="banner-nav left">&lt;</button>
         <div class="banner-content">
-            <!-- Conteúdo do banner -->
+            <img src="imagens\imagens banner\desconto.png" alt="Desconto" style="width:100%; height:auto; display:none;">
+            <img src="imagens\imagens banner\rayban.png" alt="Rayban" style="width:100%; height:auto; display:none;">
         </div>
         <button class="banner-nav right">&gt;</button>
     </section>
@@ -39,28 +40,72 @@
     <section class="info-section">
         <div class="info-item">
             <i class="ph-package"></i>
+            <img src="imagens\icones\icone_caixa.png">
             <p>Venda por encomenda</p>
         </div>
         <div class="info-item">
             <i class="ph-credit-card"></i>
+            <img src="imagens\icones\icone_cartao.png">
             <p>Parcelamento em até 12x</p>
         </div>
         <div class="info-item">
             <i class="ph-storefront"></i>
+            <img src="imagens\icones\icone_casa.png">
             <p>Compra garantida</p>
         </div>
     </section>
 
     <!-- Produtos -->
     <section class="products">
-        <h2>MAIS VENDIDOS</h2>
-        <div class="product-list">
-            <!-- Produtos em destaque -->
-        </div>
-        <div class="product-nav">
-            <button class="left">&lt;</button>
-            <button class="right">&gt;</button>
-        </div>
+        <section class="mais-vendidos">
+            <h2>MAIS VENDIDOS</h2>
+            <div class="carousel-container">
+              <div class="inner-carousel">
+                <div class="track">
+                  <div class="card-container">
+                    <div class="card card1"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card2"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card3"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card4"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card5"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card6"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card7"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card8"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card9"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card10"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card11"></div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card card12"></div>
+                  </div>
+                </div>
+                <div class="nav">
+                  <button class="prev"><i class="fas fa-arrow-left fa-2x"></i></button>
+                  <button class="next"><i class="fas fa-arrow-right fa-2x"></i></button>
+                </div>
+              </div>
+            </div>
+          </section>          
     </section>
     
     <!-- Rodapé -->
@@ -111,5 +156,65 @@
             Brasília, Distrito Federal/DF.
         </div>
     </footer>
+
+    <script>
+        //animção do banner
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.banner-content img');
+        const totalImages = images.length;
+    
+        document.querySelector('.banner-nav.left').addEventListener('click', () => {
+            images[currentImageIndex].style.display = 'none';
+            currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : totalImages - 1;
+            images[currentImageIndex].style.display = 'block';
+        });
+    
+        document.querySelector('.banner-nav.right').addEventListener('click', () => {
+            images[currentImageIndex].style.display = 'none';
+            currentImageIndex = (currentImageIndex < totalImages - 1) ? currentImageIndex + 1 : 0;
+            images[currentImageIndex].style.display = 'block';
+        });
+    
+        // Exibir a primeira imagem ao carregar
+        images[currentImageIndex].style.display = 'block';
+    </script>
+
+
+    <script>
+
+    //animação do carrossel de produtos
+        const prev = document.querySelector(".prev");
+        const next = document.querySelector(".next");
+        const carousel = document.querySelector(".carousel-container");
+        const track = document.querySelector(".track");
+        let width = carousel.offsetWidth;
+        let index = 0;
+
+        window.addEventListener("resize", function () {
+        width = carousel.offsetWidth;
+        });
+
+        next.addEventListener("click", function (e) {
+        e.preventDefault();
+        index = index + 1;
+        prev.classList.add("show");
+        track.style.transform = "translateX(" + index * -width + "px)";
+        if (track.offsetWidth - index * width < index * width) {
+            next.classList.add("hide");
+        }
+        });
+
+        prev.addEventListener("click", function () {
+        index = index - 1;
+        next.classList.remove("hide");
+        if (index === 0) {
+            prev.classList.remove("show");
+        }
+        track.style.transform = "translateX(" + index * -width + "px)";
+        });
+
+    </script>
+
+
 </body>
 </html>

@@ -8,7 +8,7 @@
 
 .sidebar {
     width: 380px; /* Aumentando a largura da sidebar */
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     padding: 20px;
     position: sticky; /* Fixa a barra lateral no lado esquerdo enquanto rola a página */
     top: 0;
@@ -34,7 +34,7 @@
 
 .sidebar ul li a {
     color: black;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 /* Seção de conteúdo (Sobre Nós e Unidades) */
@@ -69,7 +69,7 @@
 
 /* Rodapé */
 footer {
-    background-color: #f8f8f8;
+    background-color: #dadada;
     padding: 20px;
 }
 

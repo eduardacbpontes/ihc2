@@ -46,12 +46,13 @@ nav a {
 
 /* Banner */
 .banner {
-    position: relative;
+    position: relative; /* Certifica-se de que o banner não se sobreponha a outros elementos */
     background-color: #f5f5f5;
-    height: 300px;
+    height: 540px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 80px; /* Espaço adicional abaixo do banner */
 }
 
 .banner-nav {
@@ -73,6 +74,7 @@ nav a {
     justify-content: space-around;
     padding: 20px 0;
     background-color: #f9f9f9;
+    padding-top: 20px;
 }
 
 .info-item {
@@ -88,9 +90,15 @@ nav a {
     margin-top: 10px;
 }
 
+.info-item img{
+    width: 110px;
+    height: 110px;
+}
+
 /* Produtos */
 .products {
     padding: 20px;
+    margin-top: 40px; /* Espaço extra para que os produtos não fiquem colados ao banner */
 }
 
 .products h2 {
@@ -120,7 +128,7 @@ nav a {
 
 
 footer {
-    background-color: #f8f8f8;
+    background-color: #dadada;
     padding: 20px;
 }
 
@@ -193,4 +201,152 @@ footer {
 .Pagamento-icons li a img {
     width: 30px; /* Tamanho dos ícones de pagamento */
     height: auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .carousel-container {
+    width: 1100px;
+    margin: 50px auto;
+    position: relative;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-container {
+      width: 95%;
+    }
+  }
+  
+  .inner-carousel {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .track {
+    display: inline-flex;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card-container {
+    width: 275px;
+    height: 400px;
+    flex-shrink: 0;
+    padding-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .card-container {
+      width: 184px;
+    }
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+  
+  .nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid #000;
+    cursor: pointer;
+  }
+  
+  .nav .prev {
+    left: -30px;
+    display: none;
+  }
+  
+  .nav .prev.show {
+    display: block;
+  }
+  
+  .nav .next {
+    right: -30px;
+  }
+  
+  .nav .next.hide {
+    display: none;
+  }
+  
+  /* Adicionando estilos para as classes das imagens */
+  .card1 {
+    background-image: url("eyeglasses-2588234_1280.jpg");
+  }
+  
+  .card2 {
+    background-image: url("glasses-1952937_1280.jpg");
+  }
+  
+  .card3 {
+    background-image: url("glasses-2450859_1280.jpg");
+  }
+  
+  .card4 {
+    background-image: url("glasses-3965545_1280.jpg");
+  }
+  
+  .card5 {
+    background-image: url("glasses-4181316_1280.jpg");
+  }
+  
+  .card6 {
+    background-image: url("glasses-7695511_1280.jpg");
+  }
+  
+  .card7 {
+    background-image: url("glasses-7695511_1280.jpg");
+  }
+  
+  .card8 {
+    background-image: url("sunglasses-178153_1280.jpg");
+  }
+  
+  .card9 {
+    background-image: url("sunglasses-2255620_1280.jpg");
+  }
+  
+  .card10 {
+    background-image: url("sunglasses-2523803_1280.jpg");
+  }
+  
+  .card11 {
+    background-image: url("sunglasses-6562835_1280.jpg");
+  }
+  
+  .card12 {
+    background-image: url("wood-sunglasses-2500488_1280.jpg");
+  }
+
+  /* Banner */
+.banner-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-content img {
+    position: relative; /* Use relative para manter o fluxo */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

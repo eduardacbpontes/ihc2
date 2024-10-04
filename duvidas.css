@@ -8,7 +8,7 @@
 
 .sidebar {
     width: 380px; /* Aumentando a largura da sidebar */
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     padding: 20px;
     position: sticky; /* Fixa a barra lateral no lado esquerdo enquanto rola a página */
     top: 0;
